@@ -60,7 +60,7 @@ const TarVenPortfolio = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-indigo-700 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-sky-400 to-sky-600 bg-clip-text text-transparent">
               TarVen
             </div>
             
@@ -68,7 +68,7 @@ const TarVenPortfolio = () => {
               <a href="#services" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Services</a>
               <a href="#about" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">About</a>
               <a href="#testimonials" className="text-slate-300 hover:text-blue-400 transition-colors duration-200">Testimonials</a>
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-6 py-2 rounded-full transition-all duration-200 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 px-6 py-2 rounded-full transition-all duration-200 transform hover:scale-105">
                 Get Started
               </button>
             </div>
@@ -89,7 +89,7 @@ const TarVenPortfolio = () => {
               <a href="#services" className="block text-slate-300 hover:text-blue-400 transition-colors">Services</a>
               <a href="#about" className="block text-slate-300 hover:text-blue-400 transition-colors">About</a>
               <a href="#testimonials" className="block text-slate-300 hover:text-blue-400 transition-colors">Testimonials</a>
-              <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-2 rounded-full">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-sky-600 px-6 py-2 rounded-full">
                 Get Started
               </button>
             </div>
@@ -99,11 +99,11 @@ const TarVenPortfolio = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-950 to-indigo-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-950 to-sky-900/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-sky-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-sky-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
@@ -113,11 +113,11 @@ const TarVenPortfolio = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-white via-blue-200 to-indigo-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-200 to-sky-200 bg-clip-text text-transparent">
               Digital Excellence
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
               Delivered Fast
             </span>
           </h1>
@@ -128,7 +128,7 @@ const TarVenPortfolio = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            <button className="group bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl">
               Start Your Project
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -145,7 +145,7 @@ const TarVenPortfolio = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-2">
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent mb-2">
                   {stat.number}
                 </div>
                 <div className="text-slate-400 text-sm md:text-base">{stat.label}</div>
@@ -171,10 +171,10 @@ const TarVenPortfolio = () => {
           <div className="grid md:grid-cols-2 gap-12">
             {services.map((service, index) => (
               <div key={index} className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-sky-600/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 <div className="relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 hover:border-slate-600 transition-all duration-300">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl text-blue-400 mr-4">
+                    <div className="p-3 bg-gradient-to-r from-blue-600/20 to-sky-600/20 rounded-xl text-blue-400 mr-4">
                       {service.icon}
                     </div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
@@ -229,8 +229,8 @@ const TarVenPortfolio = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="p-2 bg-indigo-600/20 rounded-lg mr-4 mt-1">
-                    <TrendingUp className="w-6 h-6 text-indigo-400" />
+                  <div className="p-2 bg-sky-600/20 rounded-lg mr-4 mt-1">
+                    <TrendingUp className="w-6 h-6 text-sky-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Data-Driven Solutions</h3>
@@ -239,8 +239,8 @@ const TarVenPortfolio = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="p-2 bg-indigo-600/20 rounded-lg mr-4 mt-1">
-                    <Shield className="w-6 h-6 text-indigo-400" />
+                  <div className="p-2 bg-sky-600/20 rounded-lg mr-4 mt-1">
+                    <Shield className="w-6 h-6 text-sky-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Enterprise-Grade Security</h3>
@@ -251,7 +251,7 @@ const TarVenPortfolio = () => {
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-3xl blur-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-sky-600/20 rounded-3xl blur-2xl"></div>
               <div className="relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-700">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
@@ -259,11 +259,11 @@ const TarVenPortfolio = () => {
                     <div className="text-slate-400 text-sm">Client Satisfaction</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">24/7</div>
+                    <div className="text-3xl font-bold text-sky-400 mb-2">24/7</div>
                     <div className="text-slate-400 text-sm">Support Available</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-indigo-400 mb-2">5★</div>
+                    <div className="text-3xl font-bold text-sky-400 mb-2">5★</div>
                     <div className="text-slate-400 text-sm">Average Rating</div>
                   </div>
                   <div className="text-center">
@@ -279,7 +279,7 @@ const TarVenPortfolio = () => {
 
       {/* Testimonials */}
       <section id="testimonials" className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-indigo-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 to-sky-900/10"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
@@ -290,7 +290,7 @@ const TarVenPortfolio = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-sky-600/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 <div className="relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700">
                   <div className="flex items-center mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -311,7 +311,7 @@ const TarVenPortfolio = () => {
 
       {/* CTA Section */}
       <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-slate-950 to-indigo-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-slate-950 to-sky-900/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
             Ready to Transform Your Business?
@@ -321,7 +321,7 @@ const TarVenPortfolio = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            <button className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-2xl">
               Get Started Today
             </button>
             <button className="px-10 py-4 border-2 border-slate-700 rounded-full text-lg font-medium hover:border-blue-500 hover:text-blue-400 transition-all duration-300">
@@ -333,15 +333,15 @@ const TarVenPortfolio = () => {
 
       {/* Footer */}
       <footer className="bg-gradient-to-b from-slate-900 to-slate-950 py-20 border-t border-slate-800 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-indigo-900/5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 to-sky-900/5"></div>
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-sky-600/5 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
-              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-6">
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent mb-6">
                 TarVen
               </div>
               <p className="text-slate-300 mb-8 leading-relaxed text-lg">
@@ -358,7 +358,7 @@ const TarVenPortfolio = () => {
                     placeholder="Enter your email"
                     className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
                   />
-                  <button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-6 py-3 rounded-lg text-white font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
+                  <button className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 px-6 py-3 rounded-lg text-white font-medium transition-all duration-200 transform hover:scale-105 whitespace-nowrap">
                     Subscribe
                   </button>
                 </div>
