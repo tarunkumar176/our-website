@@ -327,9 +327,9 @@ const Homepage = () => {
                     </div>
 
                     {/* Core Values */}
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {values.map((value, index) => (
-                        <div key={index} className="text-center group">
+                        <div key={index} className=" group">
                         <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:border-blue-600/50 transition-all duration-300 group-hover:bg-slate-800/70">
                             <div className="flex justify-center mb-4">
                             <div className="p-3 bg-gradient-to-r from-blue-600/20 to-sky-600/20 rounded-lg text-blue-400 group-hover:text-blue-300 transition-colors">
