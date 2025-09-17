@@ -1,0 +1,338 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to pure black background for CODEFORGE aesthetic */
+  --background: #000000; /* Pure black */
+  --foreground: #ffffff; /* Pure white */
+  --card: #111111; /* Very dark gray */
+  --card-foreground: #ffffff; /* Pure white */
+  --popover: #111111; /* Very dark gray */
+  --popover-foreground: #ffffff; /* Pure white */
+  --primary: #ffffff; /* White for primary elements */
+  --primary-foreground: #000000; /* Black background */
+  --secondary: #333333; /* Medium gray for DEPLOY text */
+  --secondary-foreground: #ffffff; /* White text */
+  --muted: #222222; /* Muted dark gray */
+  --muted-foreground: #666666; /* Medium gray text */
+  --accent: #444444; /* Accent gray */
+  --accent-foreground: #ffffff; /* White text */
+  --destructive: #666666; /* Gray for destructive */
+  --destructive-foreground: #ffffff; /* White text */
+  --border: #222222; /* Border gray */
+  --input: #111111; /* Input background */
+  --ring: #444444; /* Ring gray */
+  --chart-1: #ffffff; /* White */
+  --chart-2: #cccccc; /* Light gray */
+  --chart-3: #888888; /* Medium gray */
+  --chart-4: #444444; /* Dark gray */
+  --chart-5: #222222; /* Darker gray */
+  --radius: 0rem; /* No border radius for sharp, modern look */
+  --sidebar: #111111;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #222222;
+  --sidebar-ring: #444444;
+}
+
+.dark {
+  /* Same colors for dark mode since we want permanent dark mode */
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #111111;
+  --card-foreground: #ffffff;
+  --popover: #111111;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #333333;
+  --secondary-foreground: #ffffff;
+  --muted: #222222;
+  --muted-foreground: #666666;
+  --accent: #444444;
+  --accent-foreground: #ffffff;
+  --destructive: #666666;
+  --destructive-foreground: #ffffff;
+  --border: #222222;
+  --input: #111111;
+  --ring: #444444;
+  --chart-1: #ffffff;
+  --chart-2: #cccccc;
+  --chart-3: #888888;
+  --chart-4: #444444;
+  --chart-5: #222222;
+  --sidebar: #111111;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #222222;
+  --sidebar-ring: #444444;
+}
+
+@theme inline {
+  /* Updated to use Inter font family for sophisticated typography */
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    /* Remove default margins and padding for clean layout */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Add Inter font and remove scroll overflow */
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    line-height: 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar styling for CODEFORGE aesthetic */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+  }
+
+  /* Updated typography classes for Inter font and CODEFORGE style */
+  .text-colossal {
+    font-size: clamp(8rem, 15vw, 20rem);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .text-titan {
+    font-size: clamp(6rem, 12vw, 16rem);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .text-giant {
+    font-size: clamp(4rem, 8vw, 12rem);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .text-mega {
+    font-size: clamp(3rem, 6vw, 8rem);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .text-huge {
+    font-size: clamp(2rem, 4vw, 6rem);
+    line-height: 0.9;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Animation classes for slide-up effects */
+  .slide-up {
+    display: inline-block;
+    animation: slideUp 1.2s ease-out forwards;
+    transform: translateY(100%);
+  }
+
+  .slide-up-1 {
+    animation-delay: 0.1s;
+  }
+  .slide-up-2 {
+    animation-delay: 0.3s;
+  }
+  .slide-up-3 {
+    animation-delay: 0.5s;
+  }
+
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  /* Text selection styling */
+  ::selection {
+    background: #fff;
+    color: #000;
+  }
+
+  /* Image fade-in animation */
+  img {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out 0.3s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Typography refinements for enhanced readability */
+  h1,
+  h2,
+  h3,
+  .text-colossal,
+  .text-titan,
+  .text-giant,
+  .text-mega,
+  .text-huge {
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Adding fade-in-up animations with delays */
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Adding hover animations for interactive elements */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Adding pulse animation for call-to-action elements */
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseSubtle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  /* Adding stagger animation for list items */
+  .stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .stagger-animation > *:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .stagger-animation > *:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .stagger-animation > *:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .stagger-animation > *:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .stagger-animation > *:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+}
